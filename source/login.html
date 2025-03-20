@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login - 4-by-4</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/buttons.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	<script src="scripts/login.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="wrapper">
+			<img src="images/logo.png" alt="logo">
+		</div>
+		<div class="auth-buttons">
+			<button id="back-button" class="button" onclick="window.location.href='index.html'">
+				Home &nbsp;<i class="fa-solid fa-house"></i>
+			</button>
+			<button id="register-button" onclick="window.location.href='register.html'">Register &nbsp;<i class="fa-solid fa-user-plus"></i></button>
+		</div>
+	</header>
+
+	<div class="main-content">
+		<div class="form-container">
+			<div class="login-form">
+				<h2>Login</h2>
+				<form id="login-form">
+					<div class="form-group">
+						<label for="login-username">Username</label>
+						<div class="writePassword">
+							<input type="text" name="login-username" id="login-username" placeholder="Enter your username" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="login-password">Password</label>
+						<div class="writePassword">
+							<input type="password" name="login-password" id="login-password" placeholder="Enter your password" required>
+							<i id="eyeIcon2" class="fa-solid fa-eye"></i>
+						</div>
+					</div>
+					<button class="button" type="submit">Log in &nbsp;<i class="fa-solid fa-right-to-bracket"></i></button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

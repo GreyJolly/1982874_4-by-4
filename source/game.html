@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/buttons.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/timer.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/game.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	<script src="scripts/game.js"></script>
+</head>
+
+<body>
+	<div id="status"></div>
+	<div id="timers">
+		<div class="timer-container">
+			<div id="timer-box" class="timer-box red-time">
+				<div id="time-label" class="timer-label">
+					Your Time
+				</div>
+				<div class="timer-value"><span id="timer"></span></div>
+			</div>
+			<div id="timer-box-opponent" class="timer-box yellow-time">
+				<div id="time-label-opponent" class="timer-label">
+					Opponent's Time
+				</div>
+				<div class="timer-value"><span id="timer-opponent"></span></div>
+			</div>
+		</div>
+	</div>
+	<div class="main-wrapper">
+		<div class="game-section">
+			<div id="game-container"></div>
+			<div class="game-actions">
+				<div id="special-actions">
+					<button id="concede-button" class="game-control-btn" onclick="concede()">Concede &nbsp;<i class="fa-solid fa-flag"></i></button>
+					<button id="draw-offer-button" class="game-control-btn" onclick="offerDraw()">Offer Draw &nbsp;<i class="fa-solid fa-handshake"></i></button>
+				</div>
+				<button id="exit-button" class="game-control-btn" onclick="location.href = 'index.html';"
+					style="display: none;">Exit Game &nbsp;<i class="fa-solid fa-circle-xmark"></i></button>
+				<button id="replay-button" class="action-button" style="display: none;">View
+					Replay &nbsp;<i class="fa-solid fa-tv"></i></button>
+			</div>
+		</div>
+
+		<div id="chat-container">
+			<div id="chat-messages"></div>
+			<div class="chat-input-container">
+				<input type="text" id="chat-input" placeholder="Type a message...">
+				<button id="chat-send">Send &nbsp;<i class="fa-solid fa-paper-plane"></i></button>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

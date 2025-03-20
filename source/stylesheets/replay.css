@@ -1,0 +1,152 @@
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E6EFE9;
+    padding: 10px 20px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper img {
+    width: 70vw;
+    max-width: 300px;
+    height: auto;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+#status {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    padding: 1rem;
+    text-align: center;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    from { opacity: 0.8; transform: scale(1); }
+    to { opacity: 1; transform: scale(1.02); }
+}
+
+/* Game Board Container */
+.game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#game-container {
+    position: relative;
+    padding: 2rem;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.board {
+    display: grid;
+    gap: 8px;
+    padding: 20px;
+    background: linear-gradient(160deg, #2c3e50, #3498db);
+    border-radius: 14px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    border: 2px solid rgba(255,255,255,0.1);
+    margin: 0 auto;
+}
+
+/* Game Cells */
+.cell {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: inset 0 -4px 8px rgba(0,0,0,0.1);
+}
+
+.cell::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: linear-gradient(145deg, transparent 40%, rgba(255,255,255,0.3));
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.cell:hover:not(.red):not(.yellow) {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.cell.red {
+    background: linear-gradient(145deg, #e74c3c, #c0392b);
+    box-shadow: inset 0 -6px 12px rgba(0,0,0,0.2),
+                0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.cell.yellow {
+    background: linear-gradient(145deg, #f1c40f, #f39c12);
+    box-shadow: inset 0 -6px 12px rgba(0,0,0,0.2),
+                0 4px 12px rgba(241, 196, 15, 0.3);
+}
+
+
+
+/* Game Actions */
+.game-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    order: 2;
+}
+
+#special-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.game-control-btn {
+    margin: 0.5rem;
+    min-width: 120px;
+}

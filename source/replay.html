@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Replay</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/buttons.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/board.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/timer.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/replay.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<script src="scripts/replay.js"></script>
+</head>
+<body>
+    <header class="header">
+		<div class="wrapper">
+			<img src="images/logo.png" alt="logo">
+		</div>
+		<div class="auth-buttons">
+			<button id="profile-button" class="button" onclick="history.back()">Back &nbsp;<i class="fa-solid fa-rotate-left"></i></button>
+		</div>
+	</header>
+
+    <div id="status"></div>
+	<div id="timers">
+        <div class="timer-container">
+          <div class="timer-box red-time">
+          <div id = "time-label" class="timer-label">
+            Your Time
+          </div>
+          <div class="timer-value"><span id="timer"></span></div>
+          </div>
+          <div class="timer-box yellow-time">
+          <div id = "time-label-opponent" class="timer-label">
+			Opponent's Time
+          </div>
+          <div class="timer-value"><span id="timer-opponent"></span></div>
+          </div>
+        </div>
+    </div>
+    <div class="main-wrapper">
+        <div class="game-section">
+            <div id="game-container"></div>
+            <div class="game-actions">
+                <div id="special-actions">
+                    <button id="game-control-back-button" class="button" onclick="previousMove()"><i class="fa-solid fa-backward"></i></button>
+                    <button id="game-control-forward-button" class="button" onclick="nextMove()"><i class="fa-solid fa-forward"></i></button>
+                </div>
+                <button id="exit-button" class="game-control-btn" onclick="location.href = 'index.html';" style = "display: none;">Exit Game</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

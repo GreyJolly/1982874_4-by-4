@@ -1,0 +1,199 @@
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E6EFE9;
+    padding: 10px 20px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper img {
+    width: 70vw;
+    max-width: 300px;
+    height: auto;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; 
+    gap: 100px; 
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.profile-box{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.previous-games {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto; 
+}
+
+#past-games {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for Active challenge */
+h2 .highlight-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #0077cc, #004b80);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+h2 .highlight-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; 
+    width: 100%;
+    height: 3px; 
+    background: linear-gradient(135deg, #0077cc, #004b80); 
+    border-radius: 2px; 
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; 
+}
+
+h2 .highlight-text:hover::after {
+    transform: scaleX(1); 
+    transform-origin: bottom left;
+}
+
+h2 .highlight-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.previous-games {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers child elements horizontally */
+    overflow-x: auto;
+}
+
+.challenges-table {
+    margin: 0 auto; /* Centers the table within its container */
+    width: auto; /* Let table width be determined by content */
+}
+
+/* Optional: Center table text if desired */
+.challenges-table th,
+.challenges-table td {
+    text-align: center;
+    padding: 8px 12px; /* Add padding for better spacing */
+}
+
+/* Ensure the table doesn't stretch beyond viewport on mobile */
+@media (max-width: 768px) {
+    .previous-games {
+        align-items: flex-start; /* Align left on mobile */
+    }
+    .challenges-table {
+        width: 100%; /* Full width on mobile */
+    }
+}
+
+/* Modern form styling */
+#edit-profile-form {
+    display: none; /* Keep it hidden by default */
+    margin-top: 20px;
+}
+
+#update-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%; /* Ensure the form takes the full width */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Stack label and input vertically */
+    align-items: flex-start; /* Align items to the left */
+    width: 95%; /* Ensure the form group takes the full width */
+}
+
+.form-group label {
+    font-family: Arial, sans-serif; /* Match the font family */
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 5px; /* Add some space between label and input */
+}
+
+.form-group input {
+    width: 100%; /* Ensure the input takes the full width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #0077cc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 119, 204, 0.5);
+}

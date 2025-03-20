@@ -1,0 +1,63 @@
+/* Timers and Status */
+#timers {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+.timer-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.timer-box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-left: 5px solid;
+    min-width: 160px;
+    transition: transform 0.2s ease;
+}
+
+.timer-box:hover {
+    transform: translateY(-2px);
+}
+
+.timer-box.red-time {
+    border-color: #e74c3c;
+}
+
+.timer-box.yellow-time {
+    border-color: #f1c40f;
+}
+
+.timer-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.timer-icon {
+    font-size: 1.2em;
+}
+
+.timer-value {
+    font-size: 1.8rem;
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: -1px;
+}
+
+.timer-value.warning {
+    color: #e74c3c;
+    animation: pulse 0.8s infinite alternate;
+}

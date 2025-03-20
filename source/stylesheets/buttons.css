@@ -1,0 +1,89 @@
+.button, 
+#login-button, 
+#register-button, 
+#logout-button, 
+#profile-button,
+#chat-send,
+#concede-button, 
+#draw-offer-button, 
+#exit-button, 
+#create-challenge-button,
+#retire-challenge-button, 
+.action-button,
+#home-button 
+#logged-in-user{
+    background: linear-gradient(135deg, #0077cc, #004b80);
+    border: none;
+    border-radius: 25px;
+    color: white !important;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover,
+#login-button:hover, 
+#register-button:hover, 
+#logout-button:hover, 
+#profile-button:hover,
+#chat-send:hover,
+#concede-button:hover, 
+#draw-offer-button:hover, 
+#exit-button:hover, 
+#create-challenge-button:hover,
+#retire-challenge-button:hover, 
+.action-button:hover,
+#home-button:hover 
+#logged-in-user:hover{
+    background: linear-gradient(135deg, #004b80, #0077cc);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.button:active,
+#login-button:active, 
+#register-button:active, 
+#logout-button:active, 
+#profile-button:active,
+#chat-send:active,
+#concede-button:active, 
+#draw-offer-button:active, 
+#exit-button:active, 
+#create-challenge-button:active,
+#retire-challenge-button:active, 
+.action-button:active,
+#home-button:active
+#logged-in-user:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#concede-button, #exit-button,#logout-button, #retire-challenge-button {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+#concede-button:hover, #exit-button:hover, #logout-button:hover, #retire-challenge-button:hover {
+    background: linear-gradient(135deg, #c82333, #dc3545);
+}
+
+.action-button {
+    background: linear-gradient(135deg, #28a745, #218838);
+}
+
+.action-button:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+}
+
+#draw-offer-button {
+    background: linear-gradient(135deg, #ffc107, #cc9b06);
+}
+
+#draw-offer-button:hover {
+    background: linear-gradient(135deg, #cc9b06, #ffc107);
+}

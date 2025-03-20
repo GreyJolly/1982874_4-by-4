@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>4-by-4</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/buttons.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	<script src="scripts/index.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="wrapper">
+			<img src="images/logo.png" alt="logo">
+		</div>
+		<div class="auth-buttons">
+			<button id="login-button" onclick="window.location.href='login.html'">Login &nbsp;<i class="fa-solid fa-right-to-bracket"></i></button>
+			<button id="register-button" onclick="window.location.href='register.html'">Register &nbsp;<i class="fa-solid fa-user-plus"></i></button>
+			<button id="logged-in-user" class="button" style="display: none;" onclick="viewProfile()">View Profile &nbsp;<i class="fa-solid fa-circle-user"></i></button>
+			<button id="logout-button" style="display: none;">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></button>
+		</div>
+	</header>
+
+	<div class="main-content">
+		<div class="challenges-container">
+			<div id="challenges">
+				<h2><span class="highlight-text">Active Challenges</span></h2>
+				<p id="no-challenges-message">No active challenges</p>
+				<table id="challenges-table" class="challenges-table">
+					<thead>
+						<tr>
+							<th>Username</th>
+							<th>Board Size</th>
+							<th>Win Condition</th>
+							<th>Time Control</th>
+							<th>Starting Player</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody id="challenges-body">
+					</tbody>
+				</table>
+			</div>
+
+			<div id="create-challenge" style="display: none;">
+				<h2><span class="highlight-text">Create New Challenge</span></h2>
+				<form id="create-form" class="create-form">
+					<div class="form-section">
+						<h3>Size Settings</h3>
+						<div class="form-group">
+							<label for="rows">Rows:</label>
+							<div class="single-inputs">  
+								<input type="number" id="rows" value="6" min="2" max="12" class="modern-input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="cols">Columns:</label>
+							<div class="single-inputs">  
+								<input type="number" id="cols" value="7" min="2" max="20" class="modern-input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="win">Win Condition:</label>
+							<div class="single-inputs">  
+								<input type="number" id="win" value="4" min="2" max="20" class="modern-input">
+							</div>
+						</div>
+					</div>
+					<div class="form-section">
+						<h3>Timer Settings</h3>
+						<div class="form-group">
+							<label>Initial Time:</label>
+							<div class="time-inputs">
+								<input type="number" id="initial-hours" value="0" min="0" placeholder="Hours" class="modern-input">
+								<input type="number" id="initial-minutes" value="10" min="0" max="59" placeholder="Minutes" class="modern-input">
+								<input type="number" id="initial-seconds" value="0" min="0" max="59" placeholder="Seconds" class="modern-input">
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Time Increment Per Move:</label>
+							<div class="time-inputs">
+								<input type="number" id="increment-minutes" value="0" min="0" max="59" placeholder="Minutes" class="modern-input">
+								<input type="number" id="increment-seconds" value="30" min="0" max="59" placeholder="Seconds" class="modern-input">
+							</div>
+						</div>
+					</div>
+					<div class="form-section">
+						<h3>Other Settings</h3>
+						<div class="form-group">
+							<label>Starting player:</label>
+							<div class="starting-inputs">
+								<label class="radio-label">
+									<input type="radio" id="random-radio" name="starting-player" value="random" checked="checked">
+									<span>Random</span>
+								</label>
+								<label class="radio-label">
+									<input type="radio" id="creator-radio" name="starting-player" value="creator">
+									<span>Creator</span>
+								</label>
+								<label class="radio-label">
+									<input type="radio" id="joiner-radio" name="starting-player" value="joiner">
+									<span>Joiner</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-actions center-content">
+						<button id="create-challenge-button" type="submit" class="button">Create Challenge &nbsp;<i class="fa-solid fa-gamepad"></i></button>
+						<button id="retire-challenge-button" onclick="retireChallenge()" class="button">Retire Challenge &nbsp;<i class="fa-solid fa-circle-xmark"></i></button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<p class="credits">Created by: <b>Andrea Petruzzi, Elisabetta Russo, Niccolò Buonfiglio</b>
+			© 2025. All rights reserved.
+		</p>
+	</footer>
+
+</body>
+
+</html>

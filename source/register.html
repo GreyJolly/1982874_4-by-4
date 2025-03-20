@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Register - 4-by-4</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/buttons.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/register.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+	<script src="scripts/register.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="wrapper">
+			<img src="images/logo.png" alt="logo">
+		</div>
+		<div class="auth-buttons">
+			<button id="back-button" class="button" onclick="window.location.href='index.html'">
+				Home &nbsp;<i class="fa-solid fa-house"></i>
+			</button>
+			<button id="login-button" onclick="window.location.href='login.html'">Login &nbsp;<i class="fa-solid fa-right-to-bracket"></i></button>
+		</div>
+	</header>
+
+	<div class="main-content">
+		<div class="form-container">
+			<div class="register-form">
+				<h2>Register</h2>
+				<form id="register-form">
+					<div class="form-group">
+						<label for="register-username">Username</label>
+						<div class="writePassword">
+							<input type="text" name="register-username" id="register-username" placeholder="Insert a username" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="register-password">Password</label>
+						<div class="writePassword">
+							<input type="password" name="register-password" id="register-password" placeholder="Insert a password" required>
+							<i id="eyeIcon1" class="fa-solid fa-eye"></i>
+						</div>
+					</div>
+					<button class="button" type="submit">Register &nbsp;<i class="fa-solid fa-user-plus"></i></button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

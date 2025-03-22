@@ -79,7 +79,7 @@ Using the COCOMO II formula:
 
 $$\text{Effort}=2.94×\text{SLOC}^{1.0613}×EM$$
 
-$$\text{Effort}=2.94×23376^{1.0613}×0.38$
+$$\text{Effort}=2.94×23376^{1.0613}×0.38$$
 
 $$\text{Effort}=2.94×34,567×0.38≈38,500 \text{person-hours}$$
 

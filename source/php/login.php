@@ -22,7 +22,7 @@ if (isset($data['action']) && $data['action'] === 'logout') {
 	}
 
 	// Expire the auth_token cookie
-	setcookie('auth_token', '', time() - 3600, '/', '', true, true); // Secure and HttpOnly
+	setcookie('auth_token', '', time() - 3600, '/', '', false, true); 
 
 	echo json_encode(["success" => true, "message" => "Logout successful"]);
 	exit;
@@ -49,7 +49,7 @@ if ($user && password_verify($data['password'], $user['password_hash'])) {
 	$stmt->execute();
 
 	header("Content-Type: application/json");
-	header("Set-Cookie: auth_token=$token; Max-Age=" . (86400 * 30) . "; Path=/; HttpOnly; SameSite=None; Secure");
+	header("Set-Cookie: auth_token=$token; Max-Age=" . (86400 * 30) . "; Path=/; HttpOnly");
 	echo json_encode(["success" => true, "message" => "Login successful"]);
 } else {
 	http_response_code(401);

@@ -11,7 +11,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #E6EFE9;
+    background-color: #83c5be;
     padding: 10px 20px;
 }
 
@@ -196,4 +196,54 @@ h2 .highlight-text {
     border-color: #0077cc;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 119, 204, 0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #004b80;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #0077cc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #004b80;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.writePassword {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.writePassword input {
+    flex: 1;
+    padding-right: 40px; /* Space for the eye icon */
+}
+
+.writePassword i {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    color: #0077cc;
+    transition: color 0.3s ease;
+}
+
+.writePassword i:hover {
+    color: #004b80;
 }

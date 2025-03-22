@@ -1,4 +1,4 @@
-const ws = new WebSocket('ws://localhost:8081');
+const ws = new WebSocket(`ws://${window.location.hostname}:8081`);
 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('register-form').onsubmit = function (e) {

@@ -1,4 +1,4 @@
-const ws = new WebSocket('ws://localhost:8081');
+const ws = new WebSocket(`ws://${window.location.hostname}:8081`);
 const urlParams = new URLSearchParams(window.location.search);
 const gameId = urlParams.get('gameId');
 
